@@ -3,6 +3,7 @@ package networks;
 import ned.DatarateChannel;
 import modules.*;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
 import channels.*;
 
 
@@ -22,6 +23,7 @@ network twonodes
 
     submodules:
         backend: Backend;
+        logger: Logger;
         source: QNode {
             address = 1;
             buffers = 7;
@@ -54,6 +56,7 @@ network threenodes
 
     submodules:
         backend: Backend;
+        logger: Logger;
         source: QNode {
             address = 1;
             buffers = 7;
@@ -95,6 +98,7 @@ network morenodes
 
     submodules:
         backend: Backend;
+        logger: Logger;
         source: QNode {
             address = 1;
             @display("i=COMP;p=278,81");
@@ -144,6 +148,7 @@ import channels.*;
 import ned.IdealChannel;
 import ned.DatarateChannel;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
 
 // Dumbell MM network
 network topology_dumbell_MM
@@ -152,6 +157,7 @@ network topology_dumbell_MM
         **.Speed_of_light_in_fiber = 205336.986301 km;
     submodules:
         backend: Backend;
+        logger: Logger;
         EndNode1: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -219,6 +225,7 @@ network topology_dumbell_MIM
         **.Speed_of_light_in_fiber = 205336.986301 km;
     submodules:
         backend: Backend;
+        logger: Logger;
         EndNode1: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -338,6 +345,7 @@ import ned.IdealChannel;
 import channels.*;
 import modules.*;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
 
 network Layer2_Simple_MIM_MM_all_in_one
 {
@@ -347,6 +355,7 @@ network Layer2_Simple_MIM_MM_all_in_one
         @display("bgb=707,326");
     submodules:
         backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -526,6 +535,8 @@ network Layer2_Simple_MIM_MM_7km
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -565,6 +576,8 @@ network Layer2_Simple_MIM_MM_10km
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -607,6 +620,8 @@ network Layer2_Simple_MIM_MM_15km
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -647,6 +662,8 @@ network Layer2_Simple_MIM_MM_50km
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -688,6 +705,8 @@ network Layer2_Simple_MIM_MM_40km
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -728,6 +747,8 @@ network Layer2_Simple_MIM_MM_30km
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -770,6 +791,8 @@ network Layer2_Simple_MIM_MM
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -813,6 +836,8 @@ network Layer2_Simple_MIM_MM_same
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -854,6 +879,8 @@ network Layer2_RouterNet
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         Router1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -922,6 +949,8 @@ network Layer2_Star_Sep
 
         @display("bgb=707,326");
     submodules:
+        backend: Backend;
+        logger: Logger;
         Router1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -1149,6 +1178,8 @@ network Layer2_MM_MIM_MIM_MIM_MM
         **.Speed_of_light_in_fiber = 205336.986301 km;
 
     submodules:
+        backend: Backend;
+        logger: Logger;
         //EndNode[2]: QNode {
         EndNode[1]: QNode {
             address = 100+index;
@@ -1187,6 +1218,8 @@ network Layer2_MIM_MIM
         **.Speed_of_light_in_fiber = 205336.986301 km;
 
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode[2]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -1226,6 +1259,8 @@ network Layer2_MIM_tomography
 
         @display("bgb=305,240;bgl=3");
     submodules:
+        backend: Backend;
+        logger: Logger;
         EndNode[2]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -1334,8 +1369,9 @@ package networks;
 
 import ned.DatarateChannel;
 import modules.*;
-import modules.Backend.Backend;
 import channels.*;
+import modules.Backend.Backend;
+import modules.Logger.Logger;
 
 //
 // TODO auto-generated type
@@ -1361,6 +1397,7 @@ network Simple_constant_quantum_cost
 
     submodules:
         backend: Backend;
+        logger: Logger;
         endnode[3]: QNode {
             address = 10000000+index;
             nodeType = "EndNode";
@@ -1417,6 +1454,7 @@ import ned.IdealChannel;
 
 import modules.*;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
 import channels.*;
 
 
@@ -1427,6 +1465,7 @@ network Tomography_Linear_One_MM_MIM
 
     submodules:
         backend: Backend;
+        logger: Logger;
         EndNode[2]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -1465,6 +1504,7 @@ network Linear_One_MIM
 
     submodules:
         backend: Backend;
+        logger: Logger;
         source: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -1500,6 +1540,7 @@ network Linear_One_MIM_biasedDistance
 
     submodules:
         backend: Backend;
+        logger: Logger;
         source: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -1535,6 +1576,7 @@ network Linear_One_MM
 
     submodules:
         backend: Backend;
+        logger: Logger;
         EndNode[2]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -1555,6 +1597,7 @@ network Linear_One_MM_bufferGap
 
     submodules:
         backend: Backend;
+        logger: Logger;
         Small: QNode {
             address = 112302;
             nodeType = "EndNode";
@@ -1584,6 +1627,7 @@ network Linear_One_MSM
         @display("bgb=281,95");
     submodules:
         backend: Backend;
+        logger: Logger;
         source: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -1756,6 +1800,7 @@ import ned.IdealChannel;
 
 import modules.*;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
 import channels.*;
 
 network Three_HoM_star
@@ -1800,6 +1845,7 @@ network Three_HoM_star
         //    @display("p=100,100");
         //}
         backend: Backend;
+        logger: Logger;
         EndNode[3]: QNode {
             //Initializerでaddress = node idにすればconflict無くなるかも。
             address = index+100000;
@@ -1870,6 +1916,7 @@ network Star_MSM
         }
     submodules:
         backend: Backend;
+        logger: Logger;
         node[3]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -1959,6 +2006,7 @@ network Star_MM
         }
     submodules:
         backend: Backend;
+        logger: Logger;
         node[3]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -1996,6 +2044,8 @@ import ned.IdealChannel;
 import channels.*;
 import modules.*;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
+
 
 network Linear_five_MM_network
 {
@@ -2005,6 +2055,7 @@ network Linear_five_MM_network
         @display("bgb=707,326");
     submodules:
         backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -2055,8 +2106,9 @@ import ned.DelayChannel;
 import ned.IdealChannel;
 
 import modules.*;
-import modules.Backend.Backend;
 import channels.*;
+import modules.Backend.Backend;
+import modules.Logger.Logger;
 
 network ispMap_1239_node_23_48_hetero_distance
 {
@@ -2098,6 +2150,7 @@ network ispMap_1239_node_23_48_hetero_distance
         }
     submodules:
         backend: Backend;
+        logger: Logger;
         hom[177]: HoM {
             address = index+1000;
             @display("p=180.525,29.725");
@@ -2873,6 +2926,7 @@ network ispMap_1239_node_23_48
         }
     submodules:
         backend: Backend;
+        logger: Logger;
         hom[177]: HoM {
             address = index+1000;
             @display("p=127,41");
@@ -3613,6 +3667,7 @@ import ned.IdealChannel;
 
 import modules.*;
 import modules.Backend.Backend;
+import modules.Logger.Logger;
 import channels.*;
 
 network Realistic_Layer2_Simple_MIM_MM_all_in_one
@@ -3623,6 +3678,7 @@ network Realistic_Layer2_Simple_MIM_MM_all_in_one
         @display("bgb=707,326");
     submodules:
         backend: Backend{}
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -3807,7 +3863,8 @@ network Realistic_Layer2_Simple_MIM_MM_5km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -3848,7 +3905,8 @@ network Realistic_Layer3_Simple_MM_MM_5km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -3893,7 +3951,8 @@ network Realistic_Layer2_Simple_MIM_MM_7_5km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -3935,7 +3994,8 @@ network Realistic_Layer2_Simple_MIM_MM_10km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -3978,7 +4038,8 @@ network Realistic_Layer2_Simple_MIM_MM_15km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4019,7 +4080,8 @@ network Realistic_Layer2_Simple_MIM_MM_50km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4061,7 +4123,8 @@ network Realistic_Layer2_Simple_MIM_MM_40km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4104,7 +4167,8 @@ network Realistic_Layer2_Simple_MIM_MM_25km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4145,7 +4209,8 @@ network Realistic_Layer2_Simple_MIM_MM_30km
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4188,7 +4253,8 @@ network Realistic_Layer2_Simple_MIM_MM
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4232,7 +4298,8 @@ network Realistic_Layer2_Simple_MIM_MM_same
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4274,7 +4341,8 @@ network Realistic_Layer2_RouterNet
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         Router1[1]: QNode {
             address = 1;
             nodeType = "Router";
@@ -4343,7 +4411,8 @@ network Realistic_Layer2_Star_Sep
 
         @display("bgb=707,326");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode1[1]: QNode {
             address = 1;
             nodeType = "EndNode";
@@ -4570,7 +4639,8 @@ network Realistic_Layer2_MM_MIM_MIM_MIM_MM
         **.Speed_of_light_in_fiber = 208189.206944 km;
 
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         //EndNode[2]: QNode {
         EndNode[1]: QNode {
             address = 100+index;
@@ -4609,7 +4679,8 @@ network Realistic_Layer2_MIM_MIM
         **.Speed_of_light_in_fiber = 208189.206944 km;
 
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode[2]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -4649,7 +4720,8 @@ network Realistic_Layer2_MIM_tomography
 
         @display("bgb=305,240;bgl=3");
     submodules:
-        backend: Backend{}
+        backend: Backend;
+        logger: Logger;
         EndNode[2]: QNode {
             address = index;
             nodeType = "EndNode";
@@ -5292,7 +5364,6 @@ simple Application
         int TrafficPattern;
         int LoneInitiatorAddress;
         int distant_measure_count = default(7000);
-        // Maybe don't have to set the default here.
 
     gates:
         input fromRouter @loose;
@@ -5689,6 +5760,16 @@ simple RuleEngine
     gates:
         inout RouterPort;
         inout HardwareMonitorPort;
+}
+package modules.Logger;
+@namespace(quisp::modules::Logger);
+
+simple Logger
+{
+    @class(LoggerModule);
+    string log_filename;
+
+    string logger = default("JsonLogger");
 }
 package modules.Backend;
 @namespace(quisp::modules::backend);
@@ -27164,7 +27245,7 @@ sim-time-limit = 100s
 # Qnic
 #**.buffers = intuniform(7,7)
 image-path = "./quisp/images"
-
+**.logger.log_filename = "${resultdir}/${configname}-${runnumber}.jsonl"
 
 **.Hgate_error_rate = 1/2000
 **.Hgate_X_error_ratio = 0
@@ -27245,7 +27326,8 @@ seed-set = ${0..24}
 **.hom_photon_detection_per_sec = 1000000000
 **.hom_darkcount_probability = 10e-8 #1%
 
-**.link_tomography = true
+**.link_tomography = false
+**.EndToEndConnection = true
 **.initial_purification = 2
 **.Purification_type = 1001
 
